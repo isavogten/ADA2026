@@ -1,9 +1,9 @@
 from flask import Flask, request
 from flask import make_response
 from resources.order import Order, Orders
-
+from flask_cors import CORS
 app = Flask(__name__)
-
+CORS(app, resources={r"/*": {"origins": "*"}})  # This is not recommend for production.
 orders = Orders()
 placeRecord = Order()
 
@@ -29,5 +29,5 @@ def delete_orders(id):
 def create_order():
     return orders.post(request)
 
-
-app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=5000, debug=True)
