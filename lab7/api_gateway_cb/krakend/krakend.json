@@ -35,7 +35,7 @@
               "log_status_change": true
             }
           },
-          "blacklist": []
+          "deny": []
         },
         {
           "url_pattern": "/products/{resp0_type}",
@@ -46,7 +46,7 @@
           ],
           "disable_host_sanitize": true,
           "extra_config": {},
-          "blacklist": [
+          "deny": [
             "name"
           ]
         }

@@ -26,7 +26,7 @@
           "mapping": {
             "product_type": "type"
           },
-          "blacklist": [],
+          "deny": [],
           "extra_config": {
             "qos/http-cache": {
               "shared": true
@@ -46,7 +46,7 @@
               "shared": true
             }
           },
-          "blacklist": [
+          "deny": [
             "name"
           ]
         }
